@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
+import Home from './components/HomePage/Home';
+
 import './App.css';
 
+function getWindowDimensions(){
+  const {innerWidth:windowWidth,innerHeight:windowHeight} = window;
+  return ({windowWidth,windowHeight})
+}
+
+function useWindowDimensions(){
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+  useEffect(()=>{
+    function handleResize(){setWindowDimensions(getWindowDimensions())}
+    window.addEventListener('resize',handleResize);
+    return () => window.removeEventListener('resize',handleResize);
+  },[])
+  return windowDimensions;
+}
+
 function App() {
+  const {windowWidth,windowHeight} = useWindowDimensions();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Home windowWidth={windowWidth} windowHeight={windowHeight}/>
     </div>
   );
 }
