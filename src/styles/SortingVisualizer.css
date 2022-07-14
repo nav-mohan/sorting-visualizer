@@ -1,0 +1,11 @@
+.bar{
+    background-color: red;
+    margin: 0 0.5px 0 0.5px;
+}
+
+.bars{
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+

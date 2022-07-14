@@ -20,6 +20,10 @@ export default function RandomizeButton({
     }
 
     return (
-        <button className="randomize-btn" onClick={randomize}>Randomize</button>
+        <div className="randomize-btn">
+            <button onClick={randomize}>
+                    Randomize
+            </button>
+        </div>
         )
 }

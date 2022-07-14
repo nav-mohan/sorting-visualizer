@@ -3,7 +3,8 @@ import SortingVisualizer from '../SortingVisualizer/SortingVisualizer';
 import Controls from '../Controls/Controls';
 import React, { useRef } from "react";
 
-import "./Home.css"
+import "../../styles/Home.css"
+
 
 function Home({windowWidth,windowHeight}){
   const [isAnimating,setIsAnimating] = useState(false);

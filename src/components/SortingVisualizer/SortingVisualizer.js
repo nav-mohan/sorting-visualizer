@@ -1,4 +1,5 @@
-import './SortingVisualizer.css'
+import "../../styles/SortingVisualizer.css"
+
 
 export default function SortingVisualizer({
     nBars, 

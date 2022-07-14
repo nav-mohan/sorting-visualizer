@@ -4,8 +4,9 @@ import generateRandomizedArray from "../../helperFunctions/generateRandomizedArr
 import SliderArrayLength from "./SliderArrayLength";
 import SliderWaitTime from "./SliderWaitTime";
 import RandomizeButton from "./RandomizeButton";
+import Button from 'react-bootstrap/Button';
 
-import "./Controls.css"
+import "../../styles/Controls.css"
 import AlgorithsDropDown from "./AlgorithmsDropDown";
 import StartSortingButton from "./StartSorting";
 
@@ -45,6 +46,7 @@ export default function Controls({
             <RandomizeButton nBars={nBars} setArray={setArray} setColorsArray={setColorsArray} minBarHeight={5} maxBarHeight={1000}/>
             <AlgorithsDropDown algorithm={algorithm} setAlgorithm={setAlgorithm}/>
             <StartSortingButton algorithm={algorithm} array={array} setArray={setArray} setColorsArray={setColorsArray} waitTime={waitTime}/>
+            <Button>BOOTSTRAP BUTTON!!</Button>
         </div>
     )
 }
