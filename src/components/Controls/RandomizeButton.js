@@ -1,5 +1,6 @@
 import React from "react";
 import generateRandomizedArray from "../../helperFunctions/generateRandomizedArray";
+import {Button } from 'react-bootstrap';
 
 export default function RandomizeButton({
     nBars,
@@ -21,9 +22,7 @@ export default function RandomizeButton({
 
     return (
         <div className="randomize-btn">
-            <button onClick={randomize}>
-                    Randomize
-            </button>
+            <Button variant = "danger" onClick={randomize}>Randomize</Button>
         </div>
         )
 }

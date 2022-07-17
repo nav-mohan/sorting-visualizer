@@ -1,4 +1,5 @@
 import React from "react";
+import {Button } from 'react-bootstrap';
 
 import { insertionSort } from "../../SortingAlgorithms/insertionSort";
 import { mergeSort } from "../../SortingAlgorithms/mergeSort";
@@ -11,22 +12,29 @@ export default function StartSortingButton({
     setColorsArray,
     waitTime
 }){
+
     switch (algorithm) {
-        case 'insertion-sort':
+        case 'Insertion':
             return(
-                <button className="start-btn" onClick={()=>{insertionSort({array,setArray,setColorsArray,waitTime})}}>Start</button>
+                <Button onClick={()=>{insertionSort({array,setArray,setColorsArray,waitTime})}}>
+                    Start Insertion Sort
+                </Button>
             )
             break;
 
-        case 'merge-sort':
+        case 'Merge':
             return(
-                <button className="start-btn" onClick={()=>{mergeSort({array,setArray,setColorsArray,waitTime})}}>Start</button>
+                <Button onClick={()=>{mergeSort({array,setArray,setColorsArray,waitTime})}}>
+                  Start Merge Sort
+                </Button>
             )
             break;
 
         default:
             return(
-                <button className="start-btn" onClick={()=>{insertionSort({array,setArray,setColorsArray,waitTime})}}>Start</button>
+                <Button onClick={()=>{insertionSort({array,setArray,setColorsArray,waitTime})}}>
+                   Start Insertion Sort {algorithm}
+                </Button>
             )
             break;
     }

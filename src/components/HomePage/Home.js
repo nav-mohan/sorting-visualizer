@@ -1,10 +1,6 @@
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 import SortingVisualizer from '../SortingVisualizer/SortingVisualizer';
 import Controls from '../Controls/Controls';
-import React, { useRef } from "react";
-
-import "../../styles/Home.css"
-
 
 function Home({windowWidth,windowHeight}){
   const [isAnimating,setIsAnimating] = useState(false);
@@ -12,7 +8,7 @@ function Home({windowWidth,windowHeight}){
   const [array,setArray] = useState([]);
   const [colorsArray,setColorsArray] = useState([]);
   const [waitTime,setWaitTime] = useState(30);
-  const [algorithm,setAlgorithm] = useState('insertion-sort')
+  const [algorithm,setAlgorithm] = useState('Insertion')
   const [controlBarHeight,setControlBarHeight] = useState(0);
 
   return (
@@ -40,6 +36,7 @@ function Home({windowWidth,windowHeight}){
         windowWidth={windowWidth} 
         windowHeight={windowHeight}
         controlBarHeight={controlBarHeight}
+        className = "mb-10"
         />
       
     </div>

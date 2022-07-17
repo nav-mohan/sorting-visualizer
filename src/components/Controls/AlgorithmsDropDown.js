@@ -1,10 +1,19 @@
 import React from "react";
-
-export default function AlgorithsDropDown({setAlgorithm}){
+import { Dropdown,ButtonGroup,DropdownButton } from "react-bootstrap";
+export default function AlgorithmsDropDown({algorithm,setAlgorithm}){
     return(
-        <select className = "algo-select" onChange={(e)=>{setAlgorithm(e.target.value)}}>
-            <option value = 'insertion-sort'>Insertion Sort</option>
-            <option value = 'merge-sort'>Merge Sort</option>
-        </select>
+        <div id = "algo-dropdown">
+            <DropdownButton 
+                as = {ButtonGroup}
+                title = {algorithm + " Sort"}
+                variant = "warning"
+                onSelect={setAlgorithm}
+            >
+                <Dropdown.Item eventKey="Insertion">Insertion Sort</Dropdown.Item>
+                <Dropdown.Item eventKey="Merge">Merge Sort</Dropdown.Item>
+            </DropdownButton>
+
+        </div>
     )
 }
+

@@ -10,10 +10,10 @@ export default function SortingVisualizer({
     controlBarHeight
 }){
     const colorCode = {
-        0:'red',
-        1:'blue',
-        2:'green',
-        3:'white'
+        0:'#D4E47B',
+        1:'#B37BE4',
+        2:'#7BE0E4',
+        3:'#93E47B'
     }
     const SortingVisualizerDomHeight = windowHeight - controlBarHeight;
     return (

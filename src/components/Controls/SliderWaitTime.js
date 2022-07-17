@@ -1,4 +1,6 @@
 import React from "react";
+import { Form, Row, Col } from "react-bootstrap";
+import RangeSlider from "react-bootstrap/FormRange"
 
 export default function SliderWaitTime({
     minWaitTime,
@@ -8,13 +10,25 @@ export default function SliderWaitTime({
 }){
 
     return (
-        <input 
-            className="waittime-slider" 
-            type="range" 
-            min = {minWaitTime}
-            max = {maxWaitTime}
-            value={waitTime} 
-            onChange={(e)=>{setWaitTime(e.target.value)}}
-        ></input>
-    )
+        <div className="waittime-slider">
+            <Form>
+                <Form.Group as = {Col}>
+                    <Form.Group as ={Row}>
+                        <Form.Label>Wait Time</Form.Label>
+                        <Form.Control value={waitTime}/>
+                    </Form.Group>
+                    <Col>
+                        <RangeSlider
+                            min={minWaitTime} 
+                            max={maxWaitTime} 
+                            value = {waitTime} 
+                            onChange={(e)=>setWaitTime(e.target.value)}
+                            variant = 'secondary'
+                        />
+                    </Col>
+                </Form.Group>
+            </Form>
+        </div>
+        
+        )
 }
