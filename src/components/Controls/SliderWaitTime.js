@@ -10,22 +10,17 @@ export default function SliderWaitTime({
 }){
 
     return (
-        <div className="waittime-slider">
-            <Form>
-                <Form.Group as = {Col}>
-                    <Form.Label>Wait Time: {waitTime} milli-secs</Form.Label>
-                    <Col>
-                        <RangeSlider
-                            min={minWaitTime} 
-                            max={maxWaitTime} 
-                            value = {waitTime} 
-                            onChange={(e)=>setWaitTime(e.target.value)}
-                            variant = 'secondary'
-                        />
-                    </Col>
-                </Form.Group>
-            </Form>
-        </div>
-        
+        <Form.Group as = {Row}>
+            <Form.Label>Wait Time: {waitTime} milli-secs</Form.Label>
+            <Col>
+                <RangeSlider
+                    min={minWaitTime} 
+                    max={maxWaitTime} 
+                    value = {waitTime} 
+                    onChange={(e)=>setWaitTime(e.target.value)}
+                    variant = 'secondary'
+                />
+            </Col>
+        </Form.Group>
         )
 }

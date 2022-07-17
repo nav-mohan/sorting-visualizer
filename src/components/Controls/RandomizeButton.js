@@ -21,8 +21,6 @@ export default function RandomizeButton({
     }
 
     return (
-        <div className="randomize-btn">
-            <Button variant = "danger" onClick={randomize}>Randomize</Button>
-        </div>
+        <Button variant = "danger" onClick={randomize}>Randomize</Button>
         )
 }

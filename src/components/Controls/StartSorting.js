@@ -14,7 +14,6 @@ export default function StartSortingButton({
 }){
     return(
         <Button
-            className = "col-xxl-10 offset-md-2"
             onClick={()=>{
             switch(algorithm){
                 case "Insertion":

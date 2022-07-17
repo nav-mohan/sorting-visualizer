@@ -41,14 +41,14 @@ export default function Controls({
 
 
     return(
-            <Stack className="controls col-5 mx-auto mt-3 justify-content-center" ref={control_bar_ref} direction="horizontal" gap ={1}>
-                <Stack direction="vertical" gap={0}>
+            <Stack className = "mt-4 mb-4 justify-content-center align-items-center"  ref={control_bar_ref} direction="horizontal" gap ={1}>
+                <Stack className = "align-items-center justify-content-center" direction="vertical" gap={0}>
                     <SliderWaitTime minWaitTime={30} maxWaitTime={1000} waitTime={waitTime} setWaitTime={setWaitTime}/>
                     <SliderArrayLength minArrayLen={10} maxArrayLen={100} nBars={nBars} setNBars={setNBars}/>
                     <RandomizeButton nBars={nBars} setArray={setArray} setColorsArray={setColorsArray} minBarHeight={5} maxBarHeight={1000}/>
                 </Stack>
-                <Stack className = "col-md-1" gap={2} direction="vertical">
-                    <AlgorithmsDropDown algorithm={algorithm} setAlgorithm={setAlgorithm}/>
+                <Stack gap={2} className = "align-items-center justify-content-center" direction="vertical">
+                    <AlgorithmsDropDown className = "d-flex" algorithm={algorithm} setAlgorithm={setAlgorithm}/>
                     <StartSortingButton algorithm={algorithm} array={array} setArray={setArray} setColorsArray={setColorsArray} waitTime={waitTime}/>
                 </Stack>
             </Stack>

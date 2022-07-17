@@ -28,6 +28,7 @@ function Home({windowWidth,windowHeight}){
         algorithm={algorithm} 
         setAlgorithm={setAlgorithm} 
         setControlBarHeight = {setControlBarHeight}
+        className = 'Controls'
         />
       <Container>
       <SortingVisualizer 
@@ -37,9 +38,9 @@ function Home({windowWidth,windowHeight}){
         windowWidth={windowWidth} 
         windowHeight={windowHeight}
         controlBarHeight={controlBarHeight}
-        className = "mb-10"
+        className = "mb-10 SortingVisualizer"
         />
-    </Container>
+        </Container>
     </div>
   );
 }

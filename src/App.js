@@ -22,8 +22,8 @@ function App() {
   const {windowWidth,windowHeight} = useWindowDimensions();
 
   return (
-    <div className="App">
-      <Home windowWidth={windowWidth} windowHeight={0.8*windowHeight}/>
+    <div className="App max-vh-90 d-flex justify-content-center align-items-center">
+      <Home windowWidth={0.9*windowWidth} windowHeight={0.9*windowHeight}/>
     </div>
   );
 }
