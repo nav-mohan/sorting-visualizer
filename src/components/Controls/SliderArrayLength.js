@@ -12,10 +12,7 @@ export default function SliderArrayLength({
         <div className="nbar-slider">
             <Form>
                 <Form.Group as = {Col}>
-                    <Form.Group as ={Row}>
-                        <Form.Label>Number of Bars</Form.Label>
-                        <Form.Control value={nBars} xs="5"/>
-                    </Form.Group>
+                    <Form.Label>Number of Bars: {nBars} </Form.Label>
                     <Col>
                         <RangeSlider
                             min={minArrayLen} 

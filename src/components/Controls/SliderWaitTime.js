@@ -13,10 +13,7 @@ export default function SliderWaitTime({
         <div className="waittime-slider">
             <Form>
                 <Form.Group as = {Col}>
-                    <Form.Group as ={Row}>
-                        <Form.Label>Wait Time</Form.Label>
-                        <Form.Control value={waitTime}/>
-                    </Form.Group>
+                    <Form.Label>Wait Time: {waitTime} milli-secs</Form.Label>
                     <Col>
                         <RangeSlider
                             min={minWaitTime} 

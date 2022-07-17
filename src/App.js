@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <Home windowWidth={windowWidth} windowHeight={windowHeight}/>
+      <Home windowWidth={windowWidth} windowHeight={0.8*windowHeight}/>
     </div>
   );
 }

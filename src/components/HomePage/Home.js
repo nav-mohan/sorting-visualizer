@@ -1,6 +1,7 @@
 import {useState } from 'react';
 import SortingVisualizer from '../SortingVisualizer/SortingVisualizer';
 import Controls from '../Controls/Controls';
+import { Container } from 'react-bootstrap';
 
 function Home({windowWidth,windowHeight}){
   const [isAnimating,setIsAnimating] = useState(false);
@@ -28,7 +29,7 @@ function Home({windowWidth,windowHeight}){
         setAlgorithm={setAlgorithm} 
         setControlBarHeight = {setControlBarHeight}
         />
-
+      <Container>
       <SortingVisualizer 
         nBars={nBars} 
         array={array} 
@@ -38,7 +39,7 @@ function Home({windowWidth,windowHeight}){
         controlBarHeight={controlBarHeight}
         className = "mb-10"
         />
-      
+    </Container>
     </div>
   );
 }
