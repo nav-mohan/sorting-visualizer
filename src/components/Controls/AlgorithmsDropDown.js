@@ -4,6 +4,7 @@ export default function AlgorithmsDropDown({algorithm,setAlgorithm}){
     return(
         <div id = "algo-dropdown">
             <DropdownButton 
+                className = "col-xxl-10 offset-2"
                 as = {ButtonGroup}
                 title = {algorithm + " Sort"}
                 variant = "warning"

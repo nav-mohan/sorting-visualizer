@@ -12,30 +12,22 @@ export default function StartSortingButton({
     setColorsArray,
     waitTime
 }){
-
-    switch (algorithm) {
-        case 'Insertion':
-            return(
-                <Button onClick={()=>{insertionSort({array,setArray,setColorsArray,waitTime})}}>
-                    Start Insertion Sort
-                </Button>
-            )
-            break;
-
-        case 'Merge':
-            return(
-                <Button onClick={()=>{mergeSort({array,setArray,setColorsArray,waitTime})}}>
-                  Start Merge Sort
-                </Button>
-            )
-            break;
-
-        default:
-            return(
-                <Button onClick={()=>{insertionSort({array,setArray,setColorsArray,waitTime})}}>
-                   Start Insertion Sort {algorithm}
-                </Button>
-            )
-            break;
-    }
+    return(
+        <Button
+            className = "col-xxl-10 offset-md-2"
+            onClick={()=>{
+            switch(algorithm){
+                case "Insertion":
+                    insertionSort({array,setArray,setColorsArray,waitTime})
+                    break;
+                case "Merge":
+                    mergeSort({array,setArray,setColorsArray,waitTime})
+                    break
+                default:
+                    insertionSort({array,setArray,setColorsArray,waitTime})
+            }
+            }}>
+            Start {algorithm} Sort
+        </Button>
+    )
 }
